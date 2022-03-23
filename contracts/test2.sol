@@ -39,7 +39,7 @@ contract token2 is IERC20
     }
 
     modifier onlyAdmin() {
-        require(msg.sender == admin, "only Admin can reun this function!!");
+        require(msg.sender == admin, "only Admin can run this function!!");
         _;
     }
 
@@ -72,7 +72,7 @@ contract token2 is IERC20
         return true;
     }
 
-    function allowance(address ownwer_, address spender_) public onlyAdmin view returns(uint remaining){
+    function allowance(address ownwer_, address spender_) public view returns(uint remaining){
         return allowed[ownwer_][spender_];
     }
 
